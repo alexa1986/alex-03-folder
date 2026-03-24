@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Kings - Quiz</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.min.css">
+</head>
+<body class="page">
+
+    <header class="header">
+        <div class="header__logo">
+            <span class="header__logo-icon">👑</span> 
+            <span class="header__logo-text">Movie Kings</span>
+        </div>
+        
+        <nav class="header__nav nav">
+            <a href="#" class="nav__link nav__link--active">Home</a>
+            <a href="#" class="nav__link">Quiz</a>
+            <a href="#" class="nav__link">Results</a>
+        </nav>
+        
+        <div class="header__lang lang-switcher">
+            <button class="lang-switcher__btn lang-switcher__btn--active">EN</button>
+            <button class="lang-switcher__btn">FR</button>
+        </div>
+    </header>
+
+    <main class="content">
+        
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">
+                    QUOTE <span class="hero__title-highlight">KING</span><br> OR MOVIE FAN ?
+                </h1>
+                <p class="hero__text">
+                    Test your cinema knowledge by matching<br>iconic movie quotes to their films.
+                </p>
+                <div class="hero__buttons">
+                    <button class="btn btn--primary">START QUIZ</button>
+                    <button class="btn btn--secondary">BROWSE BY CATEGORY</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="features__container">
+                <article class="feature-card">
+                    <div class="feature-card__icon">A</div>
+                    <h3 class="feature-card__title">ICONIC QUOTES</h3>
+                    <p class="feature-card__text">Test your knowledge of cinema's most memorable lines.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <div class="feature-card__icon">B</div>
+                    <h3 class="feature-card__title">TRACK PROGRESS</h3>
+                    <p class="feature-card__text">Watch your score climb as you correctly identify quotes.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <div class="feature-card__icon">C</div>
+                    <h3 class="feature-card__title">GET FEEDBACK</h3>
+                    <p class="feature-card__text">Receive personalized feedback based on your performance.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="dashboard">
+            <div class="dashboard__container">
+                
+                <div class="leaderboard">
+                    <h2 class="leaderboard__title">Top Players This Week</h2>
+                    <ul class="leaderboard__list">
+                        <li class="leaderboard__item">
+                            <span class="leaderboard__player">1. SQUEEZI — <span class="leaderboard__score">20/20</span></span>
+                            <span class="leaderboard__date">MAR 22 [ 20:21 ]</span>
+                        </li>
+                        <li class="leaderboard__item">
+                            <span class="leaderboard__player">2. PERCEPTOR — <span class="leaderboard__score">20/20</span></span>
+                            <span class="leaderboard__date">MAR 21 [ 19:22 ]</span>
+                        </li>
+                        <li class="leaderboard__item">
+                            <span class="leaderboard__player">3. JORDAN KDI... — <span class="leaderboard__score">20/20</span></span>
+                            <span class="leaderboard__date">MAR 21 [ 15:55 ]</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="daily-quote">
+                    <blockquote class="daily-quote__text">
+                        “May the Force be with you.”
+                    </blockquote>
+                    <span class="daily-quote__author">— Guess the movie!</span>
+                    <br><br>
+                    <button class="btn btn--outline">REVEAL ANSWER</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__stripe"></div>
+        
+        <div class="footer__content">
+            <div class="footer__brand">
+                <h4 class="footer__title text-yellow">Movie Kings</h4>
+                <p class="footer__text">Ultimate Movie Quiz to<br>challenge your friends.</p>
+            </div>
+            
+            <div class="footer__links">
+                <h4 class="footer__title text-yellow">Navigation</h4>
+                <ul class="footer__list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Start Quiz</a></li>
+                    <li><a href="#">Results</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__links">
+                <h4 class="footer__title text-yellow">Resources</h4>
+                <ul class="footer__list">
+                    <li><a href="#">IMDb</a></li>
+                    <li><a href="#">Sight & Sound</a></li>
+                    <li><a href="#">Rotten Tomatoes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

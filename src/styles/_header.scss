@@ -1,0 +1,83 @@
+/* =========================================
+   БЛОК: HEADER (Шапка сайта)
+   ========================================= */
+
+   .header {
+    /* Используем Flexbox, чтобы раскидать элементы по краям и по центру */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Выравниваем всё по вертикали по центру */
+    padding: 24px 40px; /* Отступы: 24px сверху/снизу, 40px по бокам */
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0; /* Легкая линия снизу для отделения от контента */
+}
+
+/* --- ЛОГОТИП --- */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    font-size: 20px;
+    font-weight: 700;
+    color: #121212;
+    cursor: pointer;
+}
+
+.header__logo-icon {
+    font-size: 24px;
+}
+
+/* --- НАВИГАЦИЯ --- */
+.nav {
+    display: flex;
+    gap: 8px; /* Небольшое расстояние между ссылками */
+    align-items: center;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #888888; /* Серый цвет для неактивных ссылок */
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 100px; /* Делаем форму "таблетки" (pill) */
+    transition: all 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.nav__link:hover {
+    color: #121212; /* При наведении текст становится темным */
+}
+
+/* Модификатор для активной ссылки (сейчас это "Home") */
+.nav__link--active {
+    background-color: #f5f5f5; /* Светло-серый фон */
+    color: #121212;
+}
+
+/* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
+.lang-switcher {
+    display: flex;
+    background-color: #f5f5f5; /* Общий серый фон переключателя */
+    border-radius: 100px;
+    padding: 4px; /* Внутренний отступ, чтобы кнопки не прилипали к краям */
+    gap: 4px;
+}
+
+.lang-switcher__btn {
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    color: #888888;
+    transition: all 0.3s ease;
+}
+
+/* Модификатор для выбранного языка (сейчас это "EN") */
+.lang-switcher__btn--active {
+    background-color: #ffc107; /* Наш фирменный желтый цвет */
+    color: #121212;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3); /* Легкая желтая тень для объема */
+}

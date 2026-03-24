@@ -1,0 +1,60 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, p, figure, blockquote {
+  margin: 0;
+}
+
+/* Body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Images */
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Form elements */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("../webfonts/myfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("webfonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 800;
+  font-style: normal;
+}
+body {
+  font-family: "helvetica", Arial, sans-serif;
+  color: #F00;
+  background: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Manrope", Arial, sans-serif;
+}/*# sourceMappingURL=main.css.map */

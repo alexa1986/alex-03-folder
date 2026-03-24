@@ -1,0 +1,361 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MyFont";
+  src: url("../webfonts/myfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("webfonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 800;
+  font-style: normal;
+}
+/* =========================================
+   Файл: src/styles/_variables.scss
+   ========================================= */
+/* =========================================
+   БЛОК: HEADER (Шапка сайта)
+   ========================================= */
+.header {
+  /* Используем Flexbox, чтобы раскидать элементы по краям и по центру */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Выравниваем всё по вертикали по центру */
+  padding: 24px 40px; /* Отступы: 24px сверху/снизу, 40px по бокам */
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0; /* Легкая линия снизу для отделения от контента */
+}
+
+/* --- ЛОГОТИП --- */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Расстояние между иконкой и текстом */
+  font-size: 20px;
+  font-weight: 700;
+  color: #121212;
+  cursor: pointer;
+}
+
+.header__logo-icon {
+  font-size: 24px;
+}
+
+/* --- НАВИГАЦИЯ --- */
+.nav {
+  display: flex;
+  gap: 8px; /* Небольшое расстояние между ссылками */
+  align-items: center;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #888888; /* Серый цвет для неактивных ссылок */
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 100px; /* Делаем форму "таблетки" (pill) */
+  transition: all 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.nav__link:hover {
+  color: #121212; /* При наведении текст становится темным */
+}
+
+/* Модификатор для активной ссылки (сейчас это "Home") */
+.nav__link--active {
+  background-color: #f5f5f5; /* Светло-серый фон */
+  color: #121212;
+}
+
+/* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
+.lang-switcher {
+  display: flex;
+  background-color: #f5f5f5; /* Общий серый фон переключателя */
+  border-radius: 100px;
+  padding: 4px; /* Внутренний отступ, чтобы кнопки не прилипали к краям */
+  gap: 4px;
+}
+
+.lang-switcher__btn {
+  border: none;
+  background: transparent;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  color: #888888;
+  transition: all 0.3s ease;
+}
+
+/* Модификатор для выбранного языка (сейчас это "EN") */
+.lang-switcher__btn--active {
+  background-color: #ffc107; /* Наш фирменный желтый цвет */
+  color: #121212;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3); /* Легкая желтая тень для объема */
+}
+
+/* =========================================
+   Файл: src/styles/_home.scss
+   ========================================= */
+.hero {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 80px 20px 160px;
+  text-align: center;
+}
+.hero__title {
+  font-family: "MyFont", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+.hero__title-highlight {
+  color: #ffc107;
+}
+.hero__text {
+  font-size: 20px;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.features {
+  padding: 0 40px;
+}
+.features__container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.feature-card__icon {
+  width: 60px;
+  height: 60px;
+  background-color: #4b0082;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+.feature-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.feature-card__text {
+  font-size: 14px;
+  color: #888888;
+  line-height: 1.6;
+}
+
+.dashboard {
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+.dashboard__container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+.leaderboard {
+  flex: 1;
+}
+.leaderboard__title {
+  font-family: "MyFont", sans-serif;
+  font-size: 28px;
+  color: #4b0082;
+  margin-bottom: 24px;
+}
+.leaderboard__list {
+  list-style: none;
+}
+.leaderboard__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.leaderboard__player {
+  font-weight: 600;
+  color: #121212;
+  font-size: 14px;
+}
+.leaderboard__score {
+  color: #4b0082;
+  font-weight: 700;
+}
+.leaderboard__date {
+  color: #888888;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.daily-quote {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid #f5f5f5;
+  padding-left: 80px;
+}
+.daily-quote__text {
+  font-family: "MyFont", sans-serif;
+  font-size: 26px;
+  line-height: 1.4;
+  color: #121212;
+  margin-bottom: 16px;
+}
+.daily-quote__text::before {
+  content: "“";
+  color: #4b0082;
+}
+.daily-quote__text::after {
+  content: "”";
+  color: #4b0082;
+}
+.daily-quote__author {
+  font-size: 16px;
+  color: #121212;
+  margin-bottom: 32px;
+}
+
+/* =========================================
+   Файл: src/styles/_footer.scss
+   ========================================= */
+.footer {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+}
+.footer__stripe {
+  height: 12px;
+  background: repeating-linear-gradient(45deg, #ffc107, #ffc107 10px, rgb(211, 158.25, 0) 10px, rgb(211, 158.25, 0) 20px);
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  gap: 40px;
+}
+.footer__brand {
+  flex: 2;
+}
+.footer__links {
+  flex: 1;
+}
+.footer__title {
+  color: #ffc107;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer__text {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__list li {
+  margin-bottom: 12px;
+}
+.footer__list a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+.footer__list a:hover {
+  color: #ffc107;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.page {
+  font-family: "Manrope", sans-serif;
+  background-color: #ffffff;
+  color: #121212;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-yellow {
+  color: #ffc107;
+}
+
+/* --- СТИЛИ ДЛЯ ВСЕХ КНОПОК --- */
+.btn {
+  padding: 14px 28px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background-color: #ffc107;
+  color: #121212;
+}
+.btn--primary:hover {
+  background-color: rgb(211, 158.25, 0);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background-color: #ffffff;
+  color: #121212;
+}
+.btn--secondary:hover {
+  background-color: #f5f5f5;
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid #f5f5f5;
+  color: #121212;
+}
+.btn--outline:hover {
+  border-color: #121212;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,80 @@
+/* =========================================
+   Файл: src/styles/_footer.scss
+   ========================================= */
+
+   @use 'variables' as v;
+
+   .footer {
+       // Темно-серый фон (чуть светлее, чем основной черный, как на макете)
+       background-color: #2a2a2a; 
+       color: v.$color-light;
+       font-family: v.$font-ui;
+   
+       // Та самая желтая полоска-зебра
+       &__stripe {
+           height: 12px;
+           background: repeating-linear-gradient(
+               45deg,
+               v.$color-yellow,
+               v.$color-yellow 10px,
+               darken(#ffc107, 10%) 10px, // SCSS сам делает темно-желтый!
+               darken(#ffc107, 10%) 20px
+           );
+       }
+   
+       // Контейнер для колонок
+       &__content {
+           display: flex;
+           justify-content: space-between;
+           max-width: 1000px;
+           margin: 0 auto;
+           padding: 60px 40px;
+           gap: 40px;
+       }
+   
+       // Первая колонка с логотипом (делаем ее чуть шире остальных)
+       &__brand {
+           flex: 2; 
+       }
+   
+       // Колонки со ссылками
+       &__links {
+           flex: 1;
+       }
+   
+       // Заголовки колонок
+       &__title {
+           color: v.$color-yellow;
+           font-size: 16px;
+           font-weight: 700;
+           margin-bottom: 20px;
+       }
+   
+       // Описание под логотипом
+       &__text {
+           color: #cccccc;
+           font-size: 14px;
+           line-height: 1.6;
+       }
+   
+       // Списки ссылок
+       &__list {
+           list-style: none; // Убираем точки
+   
+           li {
+               margin-bottom: 12px; // Расстояние между ссылками
+           }
+   
+           a {
+               color: #cccccc;
+               text-decoration: none; // Убираем подчеркивание
+               font-size: 14px;
+               transition: color 0.3s ease;
+   
+               // Эффект при наведении мышки
+               &:hover {
+                   color: v.$color-yellow;
+               }
+           }
+       }
+   }
