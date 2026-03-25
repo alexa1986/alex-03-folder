@@ -95,9 +95,13 @@
 
 .hero {
   background-color: #1a1a1a;
+  background-image: url("../images/bg-pattern.png");
+  background-repeat: no-repeat;
+  background-position: center 85px;
   color: #ffffff;
   padding: 80px 20px 160px;
   text-align: center;
+  min-height: 569px;
 }
 .hero__title {
   font-family: "MyFont", sans-serif;
@@ -470,48 +474,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   gap: 15px;
-}
-#popup-profile .avatar-card input[type=radio] {
-  display: none;
 }
 #popup-profile .avatar-card__img {
   width: 90px;
-  height: auto;
+  height: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
   opacity: 0.5;
   transition: 0.2s ease-in-out;
   filter: grayscale(100%);
 }
-#popup-profile .avatar-card__radio {
+#popup-profile .avatar-card input[type=radio] {
+  margin: 0;
+  display: inline-grid;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+#popup-profile .avatar-card input[type=radio]::after {
+  content: "";
   width: 24px;
   height: 24px;
   border-radius: 50%;
   border: 2px solid white;
   background: transparent;
   transition: 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-#popup-profile .avatar-card__radio::after {
-  content: "";
-  width: 12px;
-  height: 12px;
+#popup-profile .avatar-card input[type=radio]:checked::after {
   background: #ffcc00;
-  border-radius: 50%;
-  opacity: 0;
-  transition: 0.2s;
-}
-input[type=radio]:checked ~ #popup-profile .avatar-card__img {
-  opacity: 1;
-  filter: grayscale(0%);
-  transform: scale(1.1);
-}
-input[type=radio]:checked ~ #popup-profile .avatar-card__radio {
+  box-shadow: inset 0 0 0 4px #1e1e1e;
   border-color: white;
 }
-input[type=radio]:checked ~ #popup-profile .avatar-card__radio::after {
+#popup-profile .avatar-card:has(input:checked) #popup-profile .avatar-card__img {
   opacity: 1;
+  filter: grayscale(0%);
 }
 #popup-profile .avatar-card:hover #popup-profile .avatar-card__img {
   opacity: 0.8;
