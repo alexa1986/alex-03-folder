@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Kings — Quiz Game</title>
+    <link rel="stylesheet" href="main.min.css">
+</head>
+<body class="quiz-page">
+
+    <header class="quiz-header">
+        <div class="quiz-header__container">
+            <div class="quiz-header__logo">
+                <img src="./src/images/logo-icon.svg" alt="Logo"> 
+                <span>Movie Kings</span>
+            </div>
+            <a href="index.html" class="quiz-header__stop">STOP QUIZ</a>
+        </div>
+    </header>
+
+    <main class="quiz-canvas">
+        <div class="quiz-container">
+            
+            <div class="quiz-progress">
+                <div class="quiz-progress__info">
+                    <span>QUESTION 1 OF 10</span>
+                    <span>10%</span>
+                </div>
+                <div class="quiz-progress__bar">
+                    <div class="quiz-progress__fill" style="width: 10%"></div>
+                </div>
+            </div>
+
+            <div class="quiz-card">
+                <h2 class="quiz-card__quote">"HERE'S LOOKING AT YOU, KID."</h2>
+
+                <div class="quiz-options">
+                    <button class="quiz-option">CASABLANCA</button>
+                    <button class="quiz-option">GONE WITH THE WIND</button>
+                    <button class="quiz-option">THE MALTESE FALCON</button>
+                    <button class="quiz-option">CITIZEN KANE</button>
+                </div>
+
+                <div class="quiz-footer">
+                    <button class="quiz-submit" disabled>SUBMIT ANSWER</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/scripts/quiz.js"></script>
+</body>
+</html>
