@@ -1,15 +1,13 @@
-/* =========================================
-   БЛОК: HEADER (Шапка сайта)
-   ========================================= */
+
 
    .header {
-    /* Используем Flexbox, чтобы раскидать элементы по краям и по центру */
+    
     display: flex;
     justify-content: space-between; 
-    align-items: center; /* Выравниваем всё по вертикали по центру */
-    padding: 24px 40px; /* Отступы: 24px сверху/снизу, 40px по бокам */
+    align-items: center; 
+    padding: 24px 40px; /* Отступы: сверху/снизу,  по бокам */
     background-color: #ffffff;
-    border-bottom: 1px solid #f0f0f0; /* Легкая линия снизу для отделения от контента */
+    border-bottom: 1px solid #f0f0f0; 
 }
 
 /* --- ЛОГОТИП --- */
@@ -30,13 +28,13 @@
 /* --- НАВИГАЦИЯ --- */
 .nav {
     display: flex;
-    gap: 8px; /* Небольшое расстояние между ссылками */
+    gap: 8px; /* расстояние между ссылками */
     align-items: center;
 }
 
 .nav__link {
     text-decoration: none;
-    color: #888888; /* Серый цвет для неактивных ссылок */
+    color: #888888; 
     font-weight: 600;
     font-size: 15px;
     padding: 8px 16px;
@@ -77,7 +75,7 @@
 
 /* Модификатор для выбранного языка (сейчас это "EN") */
 .lang-switcher__btn--active {
-    background-color: #ffc107; /* Наш фирменный желтый цвет */
+    background-color: #ffc107; 
     color: #121212;
-    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3); /* Легкая желтая тень для объема */
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3); 
 }

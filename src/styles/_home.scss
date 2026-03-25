@@ -1,12 +1,10 @@
 
 
-/* =========================================
-   Файл: src/styles/_home.scss
-   ========================================= */
+
 
    @use 'variables' as v;
 
-   // БЛОК 1: HERO (Главный экран)
+   // БЛОК 1: HERO 
    .hero {
        background-color: v.$color-hero-bg; 
        color: v.$color-light; 

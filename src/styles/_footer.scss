@@ -1,6 +1,4 @@
-/* =========================================
-   Файл: src/styles/_footer.scss
-   ========================================= */
+
 
    @use 'variables' as v;
 
@@ -32,7 +30,7 @@
            gap: 40px;
        }
    
-       // Первая колонка с логотипом (делаем ее чуть шире остальных)
+       // Первая колонка с логотипом 
        &__brand {
            flex: 2; 
        }
@@ -59,7 +57,7 @@
    
        // Списки ссылок
        &__list {
-           list-style: none; // Убираем точки
+           list-style: none; 
    
            li {
                margin-bottom: 12px; // Расстояние между ссылками
@@ -67,7 +65,7 @@
    
            a {
                color: #cccccc;
-               text-decoration: none; // Убираем подчеркивание
+               text-decoration: none; 
                font-size: 14px;
                transition: color 0.3s ease;
    
