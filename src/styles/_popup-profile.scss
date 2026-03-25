@@ -1,0 +1,172 @@
+@use 'variables' as v; 
+
+
+#popup-profile {
+    .popup__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(30, 30, 30, 0.9); 
+    }
+
+    .popup-profile__container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .popup-profile__main-title {
+        color: white;
+        font-family: 'Impact', sans-serif;
+        font-size: 45px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .popup-profile__wrapper {
+        background: #1e1e1e; 
+        border: 4px solid #fff; 
+        box-shadow: 12px 12px 0px #fff; 
+        padding: 50px 40px;
+        width: 100%;
+        color: white;
+        position: relative;
+    }
+
+    .popup__close {
+        color: #fff;
+        top: 20px;
+        right: 20px;
+        &:hover { color: #ffcc00; }
+    }
+
+    .popup-profile__header {
+        margin-bottom: 40px;
+        h3 { font-size: 22px; font-weight: 800; margin-bottom: 5px; }
+        p { font-size: 14px; color: #aaa; }
+    }
+
+    // Аватары
+    .avatars-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .avatar-card {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      input[type="radio"] { display: none; }
+
+    
+      &__img {
+          width: 90px;
+          height: auto;
+          opacity: 0.5; // Спящий режим
+          transition: 0.2s ease-in-out;
+          filter: grayscale(100%);
+      }
+
+      // Кастомный кружок под аватаром
+      &__radio {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 2px solid white;
+          background: transparent;
+          transition: 0.2s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          // Желтая точка внутри (скрыта по умолчанию)
+          &::after {
+              content: '';
+              width: 12px;
+              height: 12px;
+              background: #ffcc00; 
+              border-radius: 50%;
+              opacity: 0; 
+              transition: 0.2s;
+          }
+      }
+
+      
+      input[type="radio"]:checked ~ &__img {
+          opacity: 1; 
+          filter: grayscale(0%); 
+          transform: scale(1.1); 
+      }
+
+      input[type="radio"]:checked ~ &__radio {
+          border-color: white;
+          &::after {
+              opacity: 1; 
+          }
+      }
+      
+     
+      &:hover &__img {
+          opacity: 0.8;
+      }
+  }
+    // Инпут Никнейма
+    .nickname-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        label {
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        &__input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            color: white;
+            font-size: 18px;
+            padding: 10px 0;
+            font-family: inherit;
+            
+            &:focus {
+                outline: none;
+                border-bottom-color: #ffcc00;
+            }
+        }
+    }
+
+    // Желтая кнопка Старт
+    .btn-action--start {
+        width: 100%;
+        background: #ffcc00;
+        border: none;
+        color: #000;
+        font-weight: 900;
+        padding: 15px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 0.2s;
+        box-shadow: 4px 4px 0px #000;
+        
+        &:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #000;
+        }
+        
+        &:active {
+            transform: translate(0, 0);
+            box-shadow: 0px 0px 0px #000;
+        }
+    }
+}
